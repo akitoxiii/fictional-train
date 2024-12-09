@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri Dec 06 11:17:40 JST 2024
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\nsuser80640\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\6.2.0\\e1b702476fe83b2354baf88b8179f71c53fbbfae\\spring-web-6.2.0.jar=WEB-INF/lib/spring-web-6.2.0.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\nsuser80640\\.m2\\repository\\org\\springframework\\spring-web\\6.2.0\\spring-web-6.2.0.jar=WEB-INF/lib/spring-web-6.2.0.jar

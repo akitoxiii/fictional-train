@@ -1,0 +1,25 @@
+package com.example.myapp;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ProductRepository {
+	public List<Product> findByPriceBetween(Integer value1, Integer value2);
+	public List<Product> findByPriceIn(integer[] values);
+	
+	@Query("SELECT p FROM Product p ORDER BY p.price ASC")
+	public List<Product> FindAllOrderByPriceAsc();
+	
+	@Query(
+			value="SELECT id, price, name FROM Products ORDER BY price DESC",
+			nativeQuery=true
+			)
+	public List<Product> findAllOrderByPriceDesc();
+	
+	@Query("SELECT p FROM Product p WHERE p.price >= :price")
+	public List<Product> findByPrice(@Param("price") Integer price);
+}

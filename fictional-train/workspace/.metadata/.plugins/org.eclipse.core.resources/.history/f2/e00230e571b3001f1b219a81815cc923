@@ -1,0 +1,22 @@
+package com.example.myapp;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MyController01 {
+	@GetMapping("/first")
+	public java.lang.String first() {
+		
+		return "山田太郎";
+		
+	}
+
+	@GetMapping("/second/{num}")
+	public void second(@PathVariable int num) {
+		
+		return "パラメーター:" ＋ num ;
+		
+	}
+}

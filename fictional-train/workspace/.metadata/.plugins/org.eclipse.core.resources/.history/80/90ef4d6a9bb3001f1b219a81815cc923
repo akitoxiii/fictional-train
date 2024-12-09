@@ -1,0 +1,32 @@
+package com.example.myapp;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class MyController04 {
+
+	@Requestmapping("/send01")
+	public String send01() {
+
+		return "send01";
+	}
+
+	@PostMapping("/receive01")
+	public String receive01(
+			
+			Model m,
+			
+			@RequestParam("NAME") String name,
+			@RequestParam("PASS") String pass,
+			@RequestParam("CONTENT") String content
+			) {
+		m.addAttribute("name" , name);
+		m.addAttribute("pass" , pass);
+		m.addAttribute("content" , content);
+		
+		return "receive01";
+	}
+}
